@@ -1,0 +1,12 @@
+version: "24.0.2"
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: myapp-server
+    container_name: myapp-node-server
+    command: node_modules/nodemon server.js
+    volumes:
+      - ./server/:/usr/
